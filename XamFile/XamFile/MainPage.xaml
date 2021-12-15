@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamFile.MainPage">
+
+	<Grid
+		HorizontalOptions="FillAndExpand"
+		VerticalOptions="FillAndExpand"
+		Padding="1">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="9*"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
+
+		<!-- I capitalized the Entry control names and deleted the Button control name as it's not needed.
+			 Aside from that and some formatting, the XAML is the same as the example here. -->
+		<Entry Grid.Row="0"
+               x:Name="TxtFileName"
+               HorizontalOptions="FillAndExpand"
+               Margin="2" 
+               Placeholder="Enter File Name" />
+
+		<Editor Grid.Row="1"
+                x:Name="TxtFileText"
+                HorizontalOptions="FillAndExpand"
+                Placeholder="Enter Your Text" />
+
+		<Button Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                Margin="2" 
+                Text="Save"
+                Clicked="BtnSave_Clicked" />
+
+	</Grid>
+
+</ContentPage>
